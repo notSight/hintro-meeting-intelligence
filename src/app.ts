@@ -9,6 +9,7 @@ import { errorMiddleware } from "./middleware/error.middleware";
 import authRoutes from "./routes/auth.routes";
 import meetingRoutes from "./routes/meeting.routes";
 import analysisRoutes from "./routes/analysis.routes";
+import actionItemRoutes from "./routes/actionItem.routes";
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(loggerMiddleware);
 app.use("/api/auth", authRoutes);
 app.use("/api/meetings", meetingRoutes);
 app.use("/api/meetings", analysisRoutes);
+app.use("/api/action-items", actionItemRoutes);
 
 //temporary protected route to test auth middleware, will remove later
 import { authenticate } from "./middleware/auth.middleware";
