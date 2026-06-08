@@ -13,4 +13,11 @@ app.get("/", (_req, res) => {
   });
 });
 
+app.get("/test-db", async (_req, res) => {
+  res.json({
+    success: true,
+    message: "Database connected"
+  });
+});
+
 export default app;
