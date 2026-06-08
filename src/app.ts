@@ -7,6 +7,7 @@ import { loggerMiddleware } from "./middleware/logger.middleware";
 import { errorMiddleware } from "./middleware/error.middleware";
 
 import authRoutes from "./routes/auth.routes";
+import meetingRoutes from "./routes/meeting.routes";
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.use(traceIdMiddleware);
 app.use(loggerMiddleware);
 
 app.use("/api/auth", authRoutes);
+app.use("/api/meetings", meetingRoutes);
 
 
 //temporary protected route to test auth middleware, will remove later
