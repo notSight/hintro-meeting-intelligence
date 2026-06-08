@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import app from "./app";
+import "./jobs/reminder.job";
 
 dotenv.config();
 
